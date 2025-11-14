@@ -15,6 +15,15 @@ class TemperatureService(ServiceBase):
     @rpc(Float, _returns=Float)
     def f_to_k(ctx, fahrenheit):
         return (fahrenheit - 32) * 5/9 + 273.15
+    @rpc(Float, _returns=Float)
+    def c_to_k(ctx, celsius):
+        return celsius + 273.15
+
+    @rpc(Float, _returns=Float)
+    def f_to_k(ctx, fahrenheit):
+        return (fahrenheit - 32) * 5/9 + 273.15
+
+   
 
 
 # Configuración de la app SOAP
